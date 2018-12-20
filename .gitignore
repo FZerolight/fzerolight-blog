@@ -1,0 +1,5 @@
+/node_modules
+/component-hleditor
+/publisher
+/.vscode
+/blog/.vuepress/dist
