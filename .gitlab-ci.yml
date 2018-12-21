@@ -1,0 +1,25 @@
+stages:
+  - install
+  - build
+  - deploy
+
+install:
+  stage: intsall
+  script:
+    - npm install
+  cache:
+    paths:
+      - node_modules/
+
+build:
+  stage: build
+  script:
+    - vuepress build blog
+  artifacts:
+    paths:
+      - dist
+
+deploy:
+  stage: deploy
+  script:
+    - mv dist /var/static_blog

@@ -39,8 +39,9 @@
           lg9
           md12
         >
+          <Homepage v-if="$page.path == '/'" />
           <article-list
-            v-if="$page.path == '/'"
+            v-else-if="$page.path == '/posts/'"
             :articles="$site.pages.filter((val=>{return val.path!='/'&&val.path!='/about/'}))"
           />
           <About v-else-if="$page.path == '/about/'" />
@@ -76,15 +77,16 @@
 </template>
 
 <script>
+import Homepage from "./Homepage";
 import ArticleList from "./ArticleList";
 import About from "./About";
 export default {
-  components: { ArticleList, About },
+  components: { ArticleList, About, Homepage },
   data() {
     return {
       menu: [
         { title: "首页", link: "/" },
-        { title: "文章", link: "/" },
+        { title: "文章", link: "/posts/" },
         { title: "关于", link: "/about/" }
       ]
     };
