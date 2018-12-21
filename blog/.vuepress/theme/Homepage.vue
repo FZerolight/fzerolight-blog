@@ -83,19 +83,3 @@ export default {
   }
 };
 </script>
-
-
-<style>
-.__cyan {
-  background-color: #009fe3;
-}
-.__magento {
-  background-color: #e5007e;
-}
-.__yellow {
-  background-color: #ffc400;
-}
-.__black {
-  background-color: #747474;
-}
-</style>
