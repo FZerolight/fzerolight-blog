@@ -42,7 +42,7 @@
           <Homepage v-if="$page.path == '/'" />
           <article-list
             v-else-if="$page.path == '/posts/'"
-            :articles="$site.pages.filter((val=>{return val.path!='/'&&val.path!='/about/'}))"
+            :articles="$site.pages.filter((val=>{return val.path!='/'&&val.path!='/about/'&&val.path!='/posts/'}))"
           />
           <About v-else-if="$page.path == '/about/'" />
           <div
