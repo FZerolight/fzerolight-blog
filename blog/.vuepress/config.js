@@ -1,7 +1,7 @@
 module.exports = {
   title: 'FZerolight',
   description: '0光的博客',
-  dest: 'dist',
+  dest: '../../',
   ga: 'UA-131201844-1',
   markdown: {
     lineNumbers: true,
